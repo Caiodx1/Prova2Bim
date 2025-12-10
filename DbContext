@@ -1,0 +1,14 @@
+using dominio;
+using Microsoft.EntityFrameworkCore;
+
+namespace repositorio;
+
+public class AppDbContext : DbContext
+{
+    public AppDbContext(DbContextOptions<AppDbContext> options) 
+        : base(options)
+    {
+    }
+
+    public DbSet<Crianca> Criancas { get; set; }
+}
